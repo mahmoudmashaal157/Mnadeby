@@ -6,7 +6,6 @@ class OnBoardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    saveOnBoardingVisited();
     PageController _pageController = PageController(initialPage: 0);
     return Scaffold(
       body: SafeArea(
@@ -263,6 +262,7 @@ class OnBoardingScreen extends StatelessWidget {
                       Spacer(),
                       TextButton(
                           onPressed: () {
+                            saveOnBoardingVisited();
                             Navigator.pushReplacement(context,
                                 MaterialPageRoute(
                                     builder: (BuildContext context) {
